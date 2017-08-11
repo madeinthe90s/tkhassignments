@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DatawDOM</title>
+</head>
+<body>
+
+
+
+        <h1 id="demo">Hello my name is:</h1>
+
+
+	<button onclick="myFunction()">what is your name</button>
+
+	
+
+
+<script type="text/javascript">
+
+
+		
+//prompt code
+		function myFunction() {
+		    var txt;
+		    var frutas = prompt("WHAT IS YOUR NAME!", "");
+		    if (frutas == null || frutas == "WHAT IS YOUR NAME! ") {
+		        txt = "WHAT IS YOUR NAME!";
+		    } else {
+		        txt = "Hello my name is: " + frutas;
+		    }
+		    document.getElementById("demo").innerHTML = txt;}
+			</script>
+
+</body>
+</html>

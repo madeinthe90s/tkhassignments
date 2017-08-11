@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Appending to Tables</title>
+</head>
+<body>
+	
+					<table id="myTable" border="1">
+						<tr>
+							<td>Clifford</td>
+							<td>Harris</td>
+						</tr>		
+					</table>
+					Column 1: <input type="text" id="col1" placeholder="Enter first name"><br>
+					Column 2: <input type="text" id="col2" placeholder="Enter last name"><br>
+					<input type="button" onClick="insertRow()" value="Insert Row">
+
+					<script type="text/javascript">
+						function insertRow(){
+//gets HTML data
+							var table = document.getElementById("myTable");
+							var data1 = document.getElementById("col1").value;
+							var data2 = document.getElementById("col2").value;
+//elements for table
+							var tr = document.createElement("tr");
+							var td1 = document.createElement("td");
+							var td2 = document.createElement("td");
+//appending data onto table
+							td1.innerHTML = data1;
+							td2.innerHTML = data2;
+							tr.appendChild(td1);
+							tr.appendChild(td2);
+							table.appendChild(tr);
+						}
+					</script>
+</body>
+</html>

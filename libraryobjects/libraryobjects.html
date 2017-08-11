@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Library Objects</title>
+</head>
+<body>
+	<script type="text/javascript">
+//objects
+		var library = [
+			{author: 'Bill Gates', title: 'The Road Ahead', readingStatus: true},
+			{author: 'Steve Jobs', title: 'Walter Isaacson', readingStatus: true},
+			{author: 'Suzzane Collins', title: 'Mockingjay: The Final Book of the Hunger Games', readingStatus: false}
+		];
+//loop go through array
+		for(var i = 0; i < library.length; i++){
+//checks if readingStatus is true
+			if(library[i].readingStatus){
+				console.log("Already read " + library[i].title + " by " + library[i].author)
+			}
+//if readingStatus is not true it is false
+			else{
+				console.log("I still need to read " + library[i].title + " by " + library[i].author)
+			}
+		}
+	</script>
+</body>
+</html>

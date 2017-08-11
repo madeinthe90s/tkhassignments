@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>displayingnames</title>
+</head>
+<body>
+	
+	<form>
+		First Name: <input type="text" id="fname" placeholder="Enter first name"> 
+		Last Name: <input type="text" id="lname" placeholder="Enter last name">
+		<input type="button" value="Submit" onClick="getFormValue()">
+	</form>
+	
+	<p id="display"></p>
+
+	<script type="text/javascript">
+//display user's full name 
+		function getFormValue(){
+//first name
+			var first = document.getElementById("fname").value;
+//last name
+			var last = document.getElementById("lname").value;
+
+			document.getElementById("display").innerHTML = "Hello " + first + " " + last + "!";
+		}
+	</script>
+</body>
+</html>

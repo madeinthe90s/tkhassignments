@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Courious Dates</title>
+</head>
+<body>
+
+<script type="text/javascript">
+//date variables	
+	var currentTime = new Date();
+	var futuretime = new Date ("july 12, 2525");
+//calculating the difference in variables
+var dyears = futuretime.getFullYear() - currentTime.getFullYear();
+var dmonths = futuretime.getMonth() - currentTime.getMonth();
+var ddays = futuretime.getDay() - currentTime.getDay();
+//console logs
+console.log("the difference in years is " + dyears);
+console.log("the difference in months is " + dmonths);
+console.log("the difference in months is " + ddays);
+</script>
+
+</body>
+</html>

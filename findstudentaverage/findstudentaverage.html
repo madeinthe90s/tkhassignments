@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>findstudentaverage</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+//students average
+
+				   var grade = [80, 77, 88, 95, 68].reduce(add, 0);
+				   var total = 0;
+
+				    or (var i = 0; i < grade.length; i++) {
+				    	total += grade[i];
+				    }
+
+				    var avg = total/grade.length;
+//console logged grades
+					if(avg <= 60){
+							console.log("Letter grade: F")
+							}
+						else if(60 < avg <= 69){
+							console.log("Letter grade: D")
+						}
+						else if(70 <= avg <= 79){
+							console.log("Letter grade: C")
+						}
+						else if(80 <= avg <= 89){
+							console.log("Letter grade: B")
+						}
+						else{
+							console.log("Letter grade: A")
+						}
+
+				</script>
+
+</body>
+</html>

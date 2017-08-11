@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Black Jack</title>
+	<style type="text/css">
+		
+	</style>
+
+	<script type="text/javascript">
+//variabels***********************************************************************
+		var playerIndex = newArray(); //playerindex[0] = {playerHand,playerHandSuit,playerHandValueSoft playerHandValueHard}**********************************************
+		var playerHand = newArray();
+		var playerHandSuit = newArray();
+		var dealerHand = newArray();
+		var dealerHandSuit = newArray();
+		var playerHandValueHard = 0;
+		var playerHandValueSoft = 0;
+		var dealerHandValueHard = 0;
+		var dealerHandValueSoft = 0;
+		var playerCardNumber = 0;
+		var playerNumber = 0;
+		var numberOfplayers = 1;
+
+		function playerStart() {
+			c = 0
+			while(c<2){
+				playerhit();
+				c = c + 1
+			}
+		}
+
+		function dealer(){
+			while(dealerHandValueHard < 16){
+				dealerhit();
+			}
+		}	victorycheck()
+
+		function victorycheck(){
+
+		}
+
+		function stick() {
+			playerindex[playerNumber] = {playerHand, playerHandSuit,playerHandValueSoft, playerHandValueHard, playerCardNumber, playerNumber = playerNumber + 1;
+				if (playerNumber >= numberOfplayers){
+					dealer();
+				}else{
+					 playerHandValueHard = 0;
+					 playerHandValueSoft = 0;
+					 playerCardNumber = 
+					 playerHand = newArray();
+					 playerHandSuit = newArray();
+					 playerStart();
+					 }
+		}
+//Dealer hit function*********************************************
+		function dealerhit() {
+			
+			dealerHand[dealerCardNumber] = card[0];
+			dealerHandSuit[playerCardNumber] = suit;
+			var suit = randSuit();
+			var card = randCard();
+			dealerHandValueHard = dealerHandValueHard + card[1];
+			dealerHandValueSoft = dealerHandValueSoft + card[2];
+
+
+//player hit function****************************************************************************
+		function playerhit() {
+			playerCardNumber = playerCardNumber + 1;
+			var suit = randSuit();
+			var card = randCard();//card[0] = card shown to the player card[1] = hard value and card[2] is the soft value
+			playerHand[playerCardNumber] = card[0];
+			playerHandSuit[playerCardNumber] = suit;
+			playerHandValueHard = playerHandValueHard + card[1];
+			playerHandValueSoft = playerHandValueSoft + card[2];
+			
+		}
+
+		function bustCheck(x){
+			if(x > 21){
+				alert("you lost")
+				return false;
+			}else
+				return true;
+		}
+
+
+	function randSuit(){
+		var suit;
+		rand = random(0,3)
+		switch(rand){
+			case 0:
+					card = "Hearts"
+			break;
+			case 1:
+					card = "Spades"
+			break;
+			case 2:
+					suit = "Diamonds"
+			break;
+			case 3:
+					suit = "Cubs"
+			
+		default:
+				alert("error getting suit")
+
+		}
+		return suit;
+
+	}
+
+	function randCard(){
+		var cardArray = newArray();
+		var randCard = random(1,13);
+		switch(randCard){
+			Case 1:
+					cardArray[0] = "A"
+					cardArray[1] = "1"
+					cardArray[2] = "11"
+					break;
+			Case 11:
+
+					cardArray[0] = "j"
+					cardArray[1] = "10"
+					cardArray[2] = "10"
+					break;
+			Case 12:
+
+					cardArray[0] = "Q"
+					cardArray[1] = "10"
+					cardArray[2] = "10"
+					break;
+			Case 13:
+
+					cardArray[0] = "K"
+					cardArray[1] = "10"
+					cardArray[2] = "10"
+					break;
+			default:
+
+					cardArray[0] = randCard;
+					cardArray[1] = randCard;
+					cardArray[2] = randCard;
+
+
+		}
+	return cardArray;	
+
+	}
+
+
+	function random(x,y){
+		return Math.floor(Math.random()*(y-x+1)) + x;
+	}
+
+	</script>
+
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	var deck = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+	
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Black Jack</title>
+   
+   <script type="text/javascript">
+
+
+				var gameOver; var cardCount;
+
+ //card arrays of card names and suits  
+
+			   var deck = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+			   var A = '11'
+			   var J = '10'
+			   var Q = '10'
+
+			   var  cardname = deck[Math.floor(Math.random() * 13)];
+//************************************************************************************************************************
+			    var suit = ["Spades", "Clubs", "Diamonds", "Hearts"];
+
+			  	var cardsuit = suit[Math.floor(Math.random() * 4)];
+
+//***********************************************************************************************************************
+					var Card = cardname + " Of " + cardsuit;
+
+					var card1 = Card
+					var card2 = Card
+   
+					function NewHand(form){
+				if(gameOver !=0)
+				{form.say1.value=("Hand in Play!"); form.say2.value=(""); return;}
+				else
+				{form.dealer.value = 0; form.you.value = 0; cardCount=0;
+				form.dealer.value = eval(form.dealer.value) + PickACard("Dealer");
+				form.you.value = eval(form.you.value) + PickACard("You");
+				gameOver= -1; cardCount+=1;}
+
+}
+
+
+
+
+				function PickACard(strWho){
+				if(strWho =="You")
+				document.display.say2.value=();
+				else
+				document.display.say1.value=();
+				
+}
+
+
+					function cardValue(card,strWho){
+if(card == 1) {
+	if(strWho =="You" && document.display.you.value >10){
+	document.display.say2.value=document.display.say2.value+" Low"; return 1;}
+	else return 11; }
+ if(card > 10) return 10; 
+return card;
+
+
+
+
+function NewHand(form){
+if(gameOver !=0)
+{form.say1.value=("Hand in Play!"); form.say2.value=(""); return;}
+else
+{form.dealer.value = 0; form.you.value = 0; cardCount=0;
+form.dealer.value = eval(form.dealer.value) + PickACard("Dealer");
+form.you.value = eval(form.you.value) + PickACard("You");
+gameOver= -1; cardCount+=1;}
+}
+
+						function setBj(){
+						gameOver=0; cardCount=0; 
+						document.display.dealer.value=""; 
+						document.display.you.value="";
+						document.display.numgames.value="0";
+						document.display.say1.value="    Hit 'Deal'";
+						document.display.say2.value="    To Start!";
+						}
+			   	
+   </script>
+
+
+</head>
+<body OnLoad="setBj()">
+<center>
+<form name="display">
+<table bgcolor="#c0c0c0" border="1" cellspacing="0" cellpadding="3">
+
+//dealers score and cards input
+<tr>
+<td><center>Score:</center></td>
+<td><center>Dealer</center></td>
+<td><center><input type=text name="dealer" size="2"></center></td>
+<td><center>Card(s):  <input type=text name="say1" size="18" value=""></center></td>
+</tr>
+<tr>
+<td><center><input type=text name="numgames" size="3" value="0"></center></td>
+
+			//players score and cards input
+			<td><center>Player</center></td>
+			<td><center><input type=text name="you" size="2"></center></td>
+			<td><center>Card(s):  <input type=text name="say2" size="18" value=""></center></td>
+</tr>
+
+			//the players buttons
+			<tr>
+			<td><center><input type=button value="Deal" onClick="NewHand(this.form)"></center></td>
+			<td colspan=3><center>
+			<input type=button value="Stand" onClick="Dealer(this.form);LookAtHands(this.form);">
+			<input type=button value=" Hit " onClick="User(this.form)"></center></td></tr>
+			</table>
+			</form>
+			</center>
+
+
+
+
+
+</body>
+</html>
+</html>
